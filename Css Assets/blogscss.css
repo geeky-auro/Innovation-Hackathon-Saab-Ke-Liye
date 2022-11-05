@@ -603,6 +603,12 @@
   .blur {
     filter: blur(6px);
   }
+
+  .center{
+    margin: auto;
+    width: 10%;
+    padding: 10px;
+  }
   
 
   
