@@ -115,4 +115,10 @@ html {
 	.main-container_tab {
 		min-width: 100%;
 	}
-}  
+} 
+
+.center{
+    margin: auto;
+width: 0%;
+padding: 10px;
+}
