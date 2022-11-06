@@ -1,0 +1,66 @@
+.c-list {
+    counter-reset: list;
+    list-style-type: none;
+  
+    li {
+      position: relative;
+      background-color: lighten(#4b7cb6, 30%);
+      padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+  
+    li:before {
+      counter-increment: list;
+      content: counter(list);
+      position: absolute;
+      line-height: 2.5;
+      top: 50%;
+      left: -2rem;
+      transform: translateY(-50%);
+      width: 2rem;
+      height: 100%;
+      background: #4b7cb6;
+      text-align: center;
+      color: white;
+    }
+  }
+  
+  /* *********** */
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  li ~ li {
+    margin-top: 0.5rem;
+  }
+  
+  .c-wa-i {
+    --color: #4B7CB6;
+    --deg: 20deg;
+    color: var(--color);
+    position: relative;
+  }
+  
+  .c-wa-i::before,
+  .c-wa-i::after {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 100%;
+    background-color: var(--color);  
+    top: 0;
+  }
+  
+  .c-wa-i::before {
+    left: -1rem;
+    transform: rotate(calc(var(--deg) * -1));
+  }
+  .c-wa-i::after {
+    right: -1rem;
+    transform: rotate(var(--deg));
+  }
+  
